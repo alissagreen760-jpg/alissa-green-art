@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alissa Green · Fine Artist</title>
+<meta name="description" content="Original one-of-a-kind paintings, drawings, sculptures and multimedia art by Alissa Green. A little weird. A lot of wonderful.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero { max-width: var(--wrap); margin: 0 auto; background: var(--paper) url(images/site/paper.jpg) center/cover no-repeat; display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; min-height: 560px; position: relative; overflow: hidden; }
+  .hero-copy { padding: 56px clamp(24px, 5vw, 64px) 120px; }
+  .hero h1 { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(44px, 6.4vw, 78px); line-height: 1.12; margin: 0 0 34px; }
+  .hero-art { height: 100%; display: flex; align-items: flex-end; justify-content: flex-end; }
+  .hero-art img { height: 100%; width: 100%; object-fit: cover; object-position: left center; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14%); mask-image: linear-gradient(90deg, transparent 0, #000 14%); }
+  .mm-logo { position: absolute; left: 16px; bottom: 14px; width: clamp(150px, 20vw, 250px); }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 4vw, 56px); padding: 70px 0 30px; }
+  .card { background: var(--cream); border-radius: 0 0 6px 6px; display: flex; flex-direction: column; }
+  .card img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+  .card-body { padding: 34px 16px 44px; text-align: center; display: flex; flex-direction: column; align-items: center; flex: 1; }
+  .card h2 { font-weight: 400; text-transform: uppercase; letter-spacing: .16em; font-size: clamp(20px, 2.6vw, 30px); margin: 0 0 8px; }
+  .card p { font-family: var(--serif); font-style: italic; font-size: 20px; margin: 0 0 34px; }
+  .card .btn { margin-top: auto; width: 100%; max-width: 300px; }
+
+  .kinds { text-align: center; padding: 30px 0 70px; }
+  .kinds .display { font-size: clamp(42px, 7vw, 76px); margin-top: 16px; }
+
+  .latest { background: var(--cream); padding: 30px 0 34px; }
+  .latest-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+  .latest-head a { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 2.6vw, 32px); text-decoration: none; display: inline-flex; align-items: center; gap: 14px; }
+  .latest-head a:hover { text-decoration: underline; }
+  .latest-head .arrow { width: 64px; }
+  .work-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .work { text-decoration: none; font-family: var(--serif); font-size: 20px; }
+  .work .ph { aspect-ratio: 238/261; background: #e9e4da; overflow: hidden; }
+  .work img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .work:hover img { transform: scale(1.03); }
+  .work .meta { padding: 14px 20px 0; line-height: 1.25; }
+  .work .t { font-weight: 500; }
+  .work .p { font-weight: 700; margin-top: 4px; }
+
+  .gram { padding: 50px 0 10px; }
+  .gram-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+  .gram-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  .gram-grid a { display: block; aspect-ratio: 1; border-radius: 10px; overflow: hidden; }
+  .gram-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .gram-grid a:hover img { transform: scale(1.04); }
+
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; min-height: 0; }
+    .hero-copy { padding: 40px 24px 20px; }
+    .hero-art { height: 380px; }
+    .hero-art img { -webkit-mask-image: none; mask-image: none; object-position: center; }
+    .mm-logo { position: static; margin: 0 0 0 -4px; }
+    .cards { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    .work-row { grid-template-columns: repeat(2, 1fr); }
+    .gram-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body data-page="home">
+<div id="site-header"></div>
+
+<main>
+  <section class="hero" aria-label="Welcome">
+    <div class="hero-copy">
+      <h1>A little weird.<br>A lot of wonderful.</h1>
+      <a class="btn black" href="gallery.html">Shop the collection</a>
+    </div>
+    <div class="hero-art"><img src="images/site/hero-art.jpg" alt="Illustration of a blender exploding with paint splashes, cherubs, a fish, a LEGO figure and a UFO"></div>
+    <img class="mm-logo" src="images/site/multimedia-logo.png" alt="Alissa Green Multimedia Art">
+  </section>
+
+  <div class="soft">
+    <div class="wrap">
+      <section class="cards" id="meet">
+        <article class="card">
+          <img src="images/site/card-original.jpg" alt="Illustrated portrait of Alissa smiling">
+          <div class="card-body"><h2>Original Art</h2><p>Explore one-of-a-kind pieces.</p><a class="btn" href="gallery.html">Shop the gallery</a></div>
+        </article>
+        <article class="card">
+          <img src="images/site/card-multimedia.jpg" alt="Illustration of an exploding blender full of colorful objects">
+          <div class="card-body"><h2>Multimedia</h2><p>Stickers, prints, cards, apparel &amp; more.</p><a class="btn" href="multimedia.html">Shop multimedia</a></div>
+        </article>
+        <article class="card">
+          <img src="images/site/card-meet.jpg" alt="Alissa hanging her paintings on a studio wall">
+          <div class="card-body"><h2>Meet Alissa</h2><p>The artist, the process, the story.</p><a class="btn" href="about.html">About me</a></div>
+        </article>
+      </section>
+
+      <section class="kinds">
+        <p class="rule-title">More than one kind of art</p>
+        <h2 class="display">Art without one box.</h2>
+      </section>
+    </div>
+  </div>
+
+  <section class="latest">
+    <div class="wrap">
+      <div class="latest-head">
+        <div><p class="eyebrow">Shop the latest</p><h2 class="display">New Work</h2></div>
+        <a href="gallery.html">View full gallery <span class="arrow" aria-hidden="true"></span></a>
+      </div>
+      <div class="work-row" id="new-work"></div>
+    </div>
+  </section>
+
+  <section class="gram soft">
+    <div class="wrap">
+      <div class="gram-head">
+        <div><p class="eyebrow">See what she's making</p><h2 class="display">On the Gram</h2></div>
+        <a class="btn" href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener">Follow @alissa.green.art</a>
+      </div>
+      <div class="gram-grid">
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-1.jpg" alt="Airbrushed painting of glowing colorful blobs" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-2.jpg" alt="Mirror selfie of Alissa in a red polka-dot dress" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-3.jpg" alt="Poughkeepsie Open Studios artist highlight, September 12–13, 2026" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-4.jpg" alt="Hand-painted backpack covered in colorful lines" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-5.jpg" alt="Mirror selfie of Alissa" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-6.jpg" alt="Airbrushed penguin painting" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-7.jpg" alt="Oval painting with a pink glowing center and green grid floor" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-8.jpg" alt="Blue and yellow abstract painting on canvas" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-9.jpg" alt="Red window-grid painting with yellow stripes and blue drops" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-10.jpg" alt="Airbrushed painting of yellow web lines over brown squiggles" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-11.jpg" alt="Painting of penguins in an igloo under spotlights" loading="lazy"></a>
+        <a href="https://www.instagram.com/alissa.green.art/" target="_blank" rel="noopener"><img src="images/site/gram-12.jpg" alt="Painting of orange sun rays over a woven grid" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+  // New Work row: set "id" to a piece from the gallery (see data/art.json) and its
+  // title, size and price fill in automatically and the card opens that piece.
+  const NEW_WORK = [
+    { id: "", image: "images/site/new-1.jpg", title: "Painting Name", size: '16x20"', price: 45000 },
+    { id: "", image: "images/site/new-2.jpg", title: "Painting Name", size: '16x20"', price: 45000 },
+    { id: "", image: "images/site/new-3.jpg", title: "Painting Name", size: '16x20"', price: 45000 },
+    { id: "nothing-was-wrong", image: "images/site/new-4.jpg", title: "Painting Name", size: '16x20"', price: 45000 },
+  ];
+  (async () => {
+    const { esc, money } = window.Site;
+    let catalog = [];
+    try { catalog = await (await fetch("data/art.json")).json(); } catch {}
+    const byId = new Map(catalog.map((p) => [p.id, p]));
+    document.getElementById("new-work").innerHTML = NEW_WORK.map((w) => {
+      const p = byId.get(w.id);
+      const t = p ? p.title : w.title, s = p ? p.size : w.size, pr = p ? p.price : w.price;
+      return `<a class="work" href="gallery.html${p ? "#piece=" + p.id : ""}">
+        <div class="ph"><img src="${esc(w.image)}" alt="${esc(t)}" loading="lazy"></div>
+        <div class="meta"><div class="t">${esc(t)}</div><div>${esc(s)}</div><div class="p">${p && p.sold ? "Sold" : money(pr)}</div></div>
+      </a>`;
+    }).join("");
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery · Alissa Green Fine Artist</title>
+<meta name="description" content="Shop original one-of-a-kind paintings, drawings, sculptures, stickers and prints by Alissa Green.">
+<link rel="icon" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body data-page="gallery">
+<div id="site-header"></div>
+
+<main>
+  <section class="intro wrap">
+    <p class="eyebrow">The gallery</p>
+    <h1 class="display">Original Art</h1>
+    <p class="lede">Every piece is an original one-of-a-kind, handmade and shipped directly by me to guarantee authenticity and care in transit.</p>
+    <ul class="perks">
+      <li><b>Buy 2+ pieces</b> · 15% off your order</li>
+      <li><b>Bundle shipping</b> · one shipping charge for the whole order</li>
+      <li><b>Open to offers</b> ♡</li>
+    </ul>
+  </section>
+
+  <div class="toolbar" id="shop-top">
+    <div class="wrap">
+      <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      <div class="tools">
+        <label><input type="checkbox" id="hide-sold"> Hide sold</label>
+        <select id="sort" aria-label="Sort">
+          <option value="default">Gallery wall</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" id="sections"></div>
+</main>
+
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+  window.SHOP = {
+    field: "category",
+    layout: "salon",
+    groups: [
+      { id: "small", name: "Small Works & Works on Paper", chip: "Small Works" },
+      { id: "medium", name: "Medium Works", chip: "Medium Works" },
+      { id: "large", name: "Large & Panoramic Studio Works", chip: "Large & Panoramic" },
+      { id: "sculpture", name: "Sculptures", chip: "Sculptures" },
+      { id: "merch", name: "Multimedia: Stickers, Prints & More", chip: "Multimedia" },
+    ],
+  };
+</script>
+<script src="shop.js"></script>
+</body>
+</html>

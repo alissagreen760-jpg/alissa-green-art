@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alissa Green · Multimedia Art</title>
+<meta name="description" content="Stickers, prints, cards, apparel and more by Alissa Green, for the nostalgic, the curious, and the wonderfully weird.">
+<link rel="icon" href="images/mm/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+<style>
+  .mm-head { position: relative; text-align: center; padding: 18px 16px 10px; max-width: var(--wrap); margin: 0 auto; }
+  .mm-splash { position: absolute; left: 0; top: 0; width: clamp(90px, 17vw, 210px); pointer-events: none; }
+  .mm-logo-link img { width: clamp(240px, 34vw, 420px); margin: 0 auto; }
+  .mm-nav { display: flex; justify-content: center; align-items: center; gap: clamp(18px, 4.5vw, 54px); margin-top: 18px; flex-wrap: wrap; }
+  .mm-nav a:not(.btn) { text-decoration: none; text-transform: uppercase; letter-spacing: .12em; font-size: clamp(16px, 2vw, 24px); }
+  .mm-nav a:not(.btn):hover { text-decoration: underline; text-underline-offset: 6px; }
+  .mm-nav .btn { background: var(--yellow); color: var(--ink); border-radius: 99px; }
+  .mm-nav .btn:hover { background: #f0be00; }
+  .mm-nav .cart-count { background: var(--ink); color: #fff; }
+
+  .mm-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 20px; padding: 10px 0 20px; }
+  .mm-hero h1 { margin: 0; }
+  .mm-hero h1 img { width: min(100%, 440px); }
+  .mm-hero p { font-family: var(--serif); font-size: clamp(20px, 2vw, 25px); line-height: 1.15; max-width: 380px; margin: 14px 0 26px 14px; }
+  .pill { display: inline-flex; align-items: center; gap: 14px; background: var(--yellow); color: var(--ink); border-radius: 99px; padding: 18px 28px; text-decoration: none; text-transform: uppercase; letter-spacing: .04em; font-size: 18px; transition: transform .15s, background .15s; }
+  .pill:hover { background: #f0be00; transform: translateY(-2px); }
+  .mm-hero .art img { width: 100%; max-width: 440px; margin: 0 auto; }
+
+  .cats { position: relative; margin: 26px auto 0; max-width: 1064px; }
+  .cats img { width: 100%; }
+  .cat-hit { position: absolute; top: 0; bottom: 0; border-radius: 45%; }
+  .cat-hit:focus-visible { outline: 3px solid var(--ink); outline-offset: -10px; }
+  .cat-labels { position: relative; height: 70px; max-width: 1064px; margin: 8px auto 0; }
+  .cat-labels a { position: absolute; transform: translateX(-50%); text-align: center; text-decoration: none; text-transform: uppercase; letter-spacing: .1em; font-size: clamp(12px, 1.8vw, 20px); white-space: nowrap; }
+  .cat-labels .arrow { display: block; margin: 12px auto 0; width: 44px; transition: transform .2s; }
+  .cat-labels a:hover .arrow { transform: translateX(6px); }
+  .cat-hit:hover ~ img { filter: none; }
+
+  .faves { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 26px; }
+  .faves a { display: block; text-decoration: none; }
+  .faves .ph { aspect-ratio: 192/152; overflow: hidden; background: #f4f4f4; }
+  .faves img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .faves a:hover img { transform: scale(1.04); }
+  .faves .t { font-family: var(--serif); font-size: 19px; margin-top: 10px; }
+  .faves .p { font-family: var(--serif); font-weight: 700; }
+
+  .mm-section { margin-top: 64px; }
+  .toolbar .chip[aria-pressed="true"] { background: var(--ink); }
+
+  @media (max-width: 760px) {
+    .mm-hero { grid-template-columns: 1fr; }
+    .mm-hero .art { order: -1; }
+    .mm-hero .art img { max-width: 300px; }
+    .mm-hero p { margin-left: 4px; }
+    .faves { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .cat-labels { height: 56px; }
+    .cat-labels .arrow { width: 28px; margin-top: 8px; }
+  }
+</style>
+</head>
+<body data-page="multimedia">
+<div id="site-header"></div>
+
+<main>
+  <section class="wrap mm-hero">
+    <div>
+      <h1><img src="images/mm/headline.png" alt="Art gets weird over here"></h1>
+      <p>Stickers, prints, apparel and more, for the nostalgic, the curious, and the wonderfully weird.</p>
+      <a class="pill" href="#shop-top" data-jump="all">Shop the collection <span class="arrow" aria-hidden="true"></span></a>
+    </div>
+    <div class="art"><img src="images/mm/blender.png" alt="Illustrated blender bursting with paint splashes, cherubs, a fish, a LEGO figure and a UFO"></div>
+  </section>
+
+  <section class="wrap mm-section" aria-labelledby="by-cat" style="margin-top:20px">
+    <h2 class="rule-title" id="by-cat">Shop by category</h2>
+    <div class="cats">
+      <img src="images/mm/categories.png" alt="">
+      <a class="cat-hit" href="#stickers" data-jump="stickers" style="left:0;width:22.5%" aria-label="Stickers"></a>
+      <a class="cat-hit" href="#prints" data-jump="prints" style="left:22.6%;width:16.2%" aria-label="Prints"></a>
+      <a class="cat-hit" href="#cards" data-jump="cards" style="left:38.8%;width:21.2%" aria-label="Cards"></a>
+      <a class="cat-hit" href="#apparel" data-jump="apparel" style="left:60%;width:16%" aria-label="Apparel"></a>
+      <a class="cat-hit" href="#goodies" data-jump="goodies" style="left:76%;width:24%" aria-label="More goodies"></a>
+    </div>
+    <div class="cat-labels">
+      <a href="#stickers" data-jump="stickers" style="left:13.2%">Stickers<span class="arrow"></span></a>
+      <a href="#prints" data-jump="prints" style="left:32.2%">Prints<span class="arrow"></span></a>
+      <a href="#cards" data-jump="cards" style="left:50.1%">Cards<span class="arrow"></span></a>
+      <a href="#apparel" data-jump="apparel" style="left:67.3%">Apparel<span class="arrow"></span></a>
+      <a href="#goodies" data-jump="goodies" style="left:86.3%">More goodies<span class="arrow"></span></a>
+    </div>
+  </section>
+
+  <section class="wrap mm-section" aria-labelledby="faves-h" style="margin-top:30px">
+    <h2 class="rule-title" id="faves-h">Featured favorites</h2>
+    <div class="faves" id="faves"></div>
+  </section>
+
+  <section class="mm-section" aria-labelledby="shop-h">
+    <h2 class="sr-only" id="shop-h" style="position:absolute;left:-9999px">Shop</h2>
+    <div class="toolbar" id="shop-top">
+      <div class="wrap">
+        <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+        <div class="tools"><select id="sort" aria-label="Sort"><option value="default">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div>
+      </div>
+    </div>
+    <div class="wrap" id="sections"></div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+  window.SHOP = {
+    field: "kind",
+    groups: [
+      { id: "stickers", name: "Stickers", chip: "Stickers" },
+      { id: "prints", name: "Prints", chip: "Prints" },
+      { id: "cards", name: "Cards", chip: "Cards" },
+      { id: "apparel", name: "Apparel", chip: "Apparel" },
+      { id: "goodies", name: "More Goodies", chip: "More goodies" },
+    ],
+    emptyGroups: { apparel: "Tees are coming soon! Follow <a href='https://www.instagram.com/alissa.green.art/' target='_blank' rel='noopener'>@alissa.green.art</a> for the drop ♡" },
+  };
+
+  // Featured favorites: set "id" to an item from data/art.json so it opens that item
+  // with its name and price; "jump" opens a category instead.
+  const FAVES = [
+    { id: "yellow-fish-sticker", jump: "stickers", image: "images/mm/fav-1.jpg", alt: "Yellow fish sticker" },
+    { id: "", jump: "apparel", image: "images/mm/fav-2.jpg", alt: "Black t-shirt with the Art Gets Weird Over Here blender design" },
+    { id: "doctor-s-office-toy-sticker", jump: "stickers", image: "images/mm/fav-3.jpg", alt: "Bead maze toy sticker" },
+    { id: "sand-pail-shovel-sticker", jump: "stickers", image: "images/mm/fav-4.jpg", alt: "Green beach bucket and shovel sticker" },
+  ];
+  function renderFaves() {
+    const { esc, money } = window.Site;
+    const byId = new Map((window.Shop?.catalog() || []).map((p) => [p.id, p]));
+    document.getElementById("faves").innerHTML = FAVES.map((f) => {
+      const p = byId.get(f.id);
+      return `<a href="#${p ? "piece=" + p.id : f.jump}" ${p ? `data-piece="${p.id}"` : `data-jump="${f.jump}"`}>
+        <div class="ph"><img src="${esc(f.image)}" alt="${esc(p ? p.title : f.alt)}" loading="lazy"></div>
+        ${p ? `<div class="t">${esc(p.title)}</div><div class="p">${money(p.price)}</div>` : ""}
+      </a>`;
+    }).join("");
+  }
+  renderFaves();
+  document.addEventListener("shop:ready", renderFaves);
+</script>
+<script src="shop.js"></script>
+</body>
+</html>
